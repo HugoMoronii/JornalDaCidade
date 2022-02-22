@@ -1,0 +1,228 @@
+/*  *******FORMATAÇÕES GERAIS ********* */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+a:link, a:visited{
+    color: #b10300;
+    padding: 2px;
+}
+a:hover{
+    color: #e50040;
+}
+body{
+    font-family: trebuchet MS, Arial, Helvetica, sans-serif;
+    background: #fff url(imagens/fundo.png) repeat-x;
+}
+
+/* ********LAYOUT******* */
+body.home #navegacao a#home,
+body.nacional #navegacao a#nacional,
+body.internacional #navegacao a#internacional,
+body.economia #navegacao a#economia,
+body.saude #navegacao a#saude,
+body.ciencia #navegacao a#ciencia,
+body.fotos #navegacao a#fotos{
+    color: #69001d;
+    background: #de003e;
+    cursor: text;
+}
+#container{
+    width: 750px;
+    margin: 0 auto;
+    /*border: 1px solid red;*/
+}
+#topo{
+    /*border: 1px solid red;*/
+    height: 150px;
+    padding-top: 25px;
+    background: url(imagens/detalhe-topo.png) no-repeat right top;
+}
+.logo{
+    width: 152px;
+    height: 66px;
+    background: url(imagens/logo.png) no-repeat center;
+    text-indent: -3000px;
+}
+#conteudo{
+    background: #f5f5f5;
+    margin-top: 60px;
+}
+#principal{
+    width: 270px;
+    float: left;
+    margin: 0 0 20px 195px;
+}
+#principal .destaque a, #destaques .destaque a {
+    font-size: 0.9em;
+}
+#duas-colunas #principal{width: 555px;}
+#uma-coluna #principal{width: 750px; margin: 0 0 20px 0;}
+#uma-coluna #principal .caixa h3{
+    font-size: 1.4em;
+}
+
+#destaques{
+    width: 270px;
+    float: left;
+    margin: 0 0 20px 15px;
+}
+#lateral{
+    width: 180px;
+    float: left;
+    margin: 0 0 20px -750px;   
+}
+.caixa{
+    margin:  10px 0px;
+    padding: 5px 0 5px 0;
+    background: #f3f3f3 url(imagens/fundo-caixa.png);
+}
+h2{
+    font-size: 1.1em;
+    background: #294c71;
+    color: #fff;
+    padding: 5px;
+}
+.destaque h3{
+    text-transform: uppercase;
+    font-size: 0.8em;
+    display: inline;
+    padding: 3px;
+    background: #b10300;
+    color: #fff;
+}
+.entrevista h3{
+    text-transform: uppercase;
+    font-size: 0.8em;
+    display: inline;
+    padding: 3px;
+    background: #de0030;
+}
+
+.cx-conteudo{
+    background: #fff;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+label{
+    display: block;
+    cursor: pointer;
+}
+input{
+    font-size: 0.9em;
+    background: #fff;
+    padding: 5px;
+    width: 166px;
+}
+input.submit {
+    width: 80px;
+    color: #fff;
+    background-color: #b10300;
+    border: 2px solid #870529;
+    text-align: center;
+}
+.mail{
+    
+    margin-left: -5px;
+}
+
+.botao{
+    margin-top: 2px;
+    margin-left: 43px;
+}
+/*#conteudo a {
+    text-decoration: none;
+}*/
+/*LAYOUT IMAGENS*/
+img{
+    border: 2px solid #dfdfdf;
+}
+img.imagem-principal{
+    width: 98%;
+    border: 3px solid #dfdfdf;
+}
+/*LISTAS*/
+/*#lista-noticia{
+    height: 62px;
+}*/
+
+#lista-noticia li {
+    clear: both;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}
+#lista-noticia li a img {
+    /*clear: both;*/
+    float: left;
+    width: 80px;
+    margin: 2px;
+   
+}/*seleciona uma img que está dentro de um <a> que está dentro de uma <li> que está dentro da ID #lista-noticia*/
+#lista-noticia li a { 
+    text-decoration: none;
+}
+#lista-noticia li a h3 {
+    font-size: 0.98em;
+    padding: 0px;
+    color: #3e7ab9;
+}
+#lista-noticia li a p { 
+    font-size: 0.8em;
+    color: black;
+}
+#lista-noticia li:hover{
+    background: #eee;
+    cursor: pointer;
+}
+#duas-colunas #lista-noticia li{
+    line-height: 2em;
+}
+#duas-colunas #lista-noticia li a h3{
+    font-size: 1.05em;
+    padding: 0px;
+    color: #3e7ab9;
+}
+#duas-colunas #lista-noticia li a p { 
+    font-size: 0.99em;
+    color: #000;
+    padding: 0px;
+}
+
+/* LAYOUT RODAPE*/
+#rodape{
+    background: #294c71;
+    padding: 20px;
+    margin: 0 auto;
+    color: #fff;
+    text-align: center;
+}
+
+/* ******BARRAS DE NAVEGAÇÃO****** */
+/*BARRA SUPERIOR*/
+#topo ul {background: #b10300; margin-top: 30px; float:left;}/*SELECIONA SOMENTE <ul> DENTRO DE #TOPO*/
+#topo ul li {float: left;}/*SELECIONA SOMENTE <li> DE <ul> QUE ESTEJAM DENTRO DE #TOPO*/
+#topo ul a {font-size: 0.9em; font-weight: bold; display: block; padding: 0.5em 1.4em; line-height: 2.1em; text-decoration: none; color: #fff; background: url(imagens/divisor.png) no-repeat left center;}/*SLECIONA SOMENTE <a> QUE ESTEJAM DENTRO DE <ul> DESCENDENTES DE #TOPO*/
+#topo ul .primeiro a {background: none;}/*FORMATA APENAS <a> DENTRO DE #TOPO QUE USEM A CLASSE*/
+#topo ul a:hover{background-color:#b10333;}
+
+/*menu lateral*/
+#lateral ul a {
+    font-size: 0.9em;
+    padding: 3px;
+    display: block;
+    line-height: 30px;
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid #f3f3f3;
+}
+#lateral ul a:hover{
+    color: #a1a1a1;
+    background: url(imagens/marcador.png) no-repeat left center;
+    padding-left: 20px;    
+}
